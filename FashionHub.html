@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Hub</title>
+    <link rel="stylesheet" href="Fashion.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="Fashion.js"></script>
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header>
+      <div class="logo">Fashion Hub</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+
+          <li><a href="#products">Sản phẩm</a></li>
+
+          <li><a href="#about">Giới thiệu</a></li>
+
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span id="cart-count">0</span>
+      </div>
+    </header>
+    <section class="slider">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNvRIhwFSXFsm-CYsAXajGssxzr70QrZtx1JFMcNKPf5SvKgENFseVSFY&s=10"
+        class="slide active"
+      />
+      <img
+        src="https://tamanh.net/wp-content/uploads/2024/02/dinh-hinh-phong-cach-thoi-trang-nam.jpg"
+        class="slide"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp2c2SwzdGj6DwTSyQDiA7YSSCGEjGcmiXYII1BwRJVa29o9W7Ww2fEcg&s=10"
+        class="slide"
+      />
+    </section>
+    <section class="search-box">
+      <input type="text" id="search" placeholder="Tìm kiếm sản phẩm..." />
+    </section>
+    <section id="products">
+      <h2>SẢN PHẨM NỔI BẬT</h2>
+      <div class="product-list">
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAkr5bpGq8DzZpSinbpYlbSBgvQs39su93sqN86-LVYfzbN4fUgDdSm60&s=10"
+          />
+          <h3>Áo Polo Nam</h3>
+          <p class="price">350.000vnđ</p>
+          <button class="add-cart" data-name="Áo Polo Nam" data-price="350000">
+            Thêm vào giỏ
+          </button>
+        </div>
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtL6eFrv-F6IKjTGrkua2lo5FxK6Nj3AZMAgYEhvwYWbS9eVROi0X0Sk0&s=10"
+          />
+          <h3>Áo Hoodie</h3>
+          <p class="price">420.000vnđ</p>
+          <button class="add-cart" data-name="Áo Hoodie" data-price="420000">
+            Thêm vào giỏ
+          </button>
+        </div>
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcjL-TdhcLCmwcK-4CfPLs6hZZTDbDUiln8U-JwDQULKwTQxhRaRnBTVML&s=10"
+          />
+          <h3>Quần Jean</h3>
+          <p class="price">450.000vnđ</p>
+          <button class="add-cart" data-name="Quần Jean" data-price="450000">
+            Thêm vào giỏ
+          </button>
+        </div>
+        <div class="product">
+          <img
+            src="https://product.hstatic.net/200000588671/product/ao-so-mi-nam-bycotton-trang-art-nhan_8ec622a241ea4deb93a02bdbdcb87954.jpg"
+          />
+          <h3>Áo Sơ Mi</h3>
+          <p class="price">390.000vnđ</p>
+          <button class="add-cart" data-name="Áo Sơ Mi" data-price="390000">
+            Thêm vào giỏ
+          </button>
+        </div>
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3AmrMPQJyChaE5hlIMe3dE0pfhBBp66koZhtZ0KPWKQ&s=10"
+          />
+          <h3>Váy Nữ</h3>
+          <p class="price">520.000vnđ</p>
+          <button class="add-cart" data-name="Váy Nữ" data-price="520000">
+            Thêm vào giỏ
+          </button>
+        </div>
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3UOFQZo0JewHN446BWhUTdUQCjwuLyKA4W_Sl3FOYuALapvmnUu_kAtEq&s=10"
+          />
+          <h3>Áo Khoác</h3>
+          <p class="price">650.000vnđ</p>
+          <button class="add-cart" data-name="Áo Khoác" data-price="650000">
+            Thêm vào giỏ
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ================= CART ================= -->
+    <section class="cart">
+      <h2>GIỎ HÀNG</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>SL</th>
+            <th>Tổng</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cart-body"></tbody>
+      </table>
+      <h3>
+        Tổng tiền :
+        <span id="total"> 0 </span>
+        VNĐ
+      </h3>
+      <button id="clear-cart">Xóa tất cả</button>
+    </section>
+    <section id="about">
+      <h2>GIỚI THIỆU</h2>
+
+      <p>
+        Fashion Hub là cửa hàng thời trang chuyên cung cấp quần áo nam nữ chất
+        lượng cao với giá thành hợp lý.
+      </p>
+    </section>
+    <section id="contact">
+      <h2>LIÊN HỆ</h2>
+
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Họ tên" />
+
+        <input type="email" id="email" placeholder="Email" />
+
+        <textarea id="message" placeholder="Nội dung"></textarea>
+
+        <button>Gửi</button>
+      </form>
+    </section>
+    <footer>
+      <p>© 2026 Fashion Hub</p>
+    </footer>
+
+    <!-- Back To Top -->
+
+    <button id="topBtn">↑</button>
+  </body>
+</html>
